@@ -1,3 +1,6 @@
+# 👋 Hi, I'm Anand Kumar
+
+🎓 Full-Stack Developer
 # BlogHub - A Simple Blogging Platform
 
 A full-stack MERN (MongoDB, Express.js, React.js, Node.js) blogging application that allows users to register, login, create blog posts, view blogs, and manage their own posts.
@@ -94,6 +97,7 @@ A full-stack MERN (MongoDB, Express.js, React.js, Node.js) blogging application 
 3. **Create environment variables**
    Create a `.env` file in the backend directory:
    ```env
+
    PORT=5000
    MONGODB_URI=mongodb://localhost:27017/bloghub
    JWT_SECRET=your_jwt_secret_key_here_make_it_long_and_secure
@@ -218,11 +222,47 @@ ASSIGNMENT/
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the specific licnese.
 
 ## 👨‍💻 Author
+## 📌 Other Projects
+
+👉 **E-commerce React Website (Frontend):**
+🔗 [ecommerce-react-website-beta.vercel.app](https://ecommerce-react-website-beta.vercel.app/)
+
+👉 **E-commerce API (Node.js/Express):**
+🔗 [evara-main-backend.onrender.com/api/products](https://evara-main-backend.onrender.com/api/products)
+
+
+
+## 🤝 Contributing
+
+Pull requests are welcome. For major changes, open an issue first to discuss.
+
+---
+
+## 👨‍💻 About Me
+
+Hi, I'm **Anand Kumar**, a full-stack developer passionate about modern web and AI integration.
+
+* 📧 Email: [georgian3125anand@gmail.com](mailto:georgian3125anand@gmail.com)
+* 📞 Phone: +91 9430417562
+* 🌐 Portfolio: [https://anand3125.github.io/Akfolio/](https://anand3125.github.io/Akfolio/)
+* 🔗 LinkedIn: [linkedin.com/in/georgian3125anand](https://www.linkedin.com/in/georgian3125anand/)
+* 🐦 Twitter: [x.com/Anand_3125](https://x.com/Anand_3125)
+* 📅 Last Updated: **📅 August 2nd, 2025**
+
+* 📄 Resume: [https://shorturl.at/6tjZ9](https://shorturl.at/6tjZ9)
+
+---
+
+
+
+
+
 
 Created as a MERN Stack Developer assignment for BlogHub - A Simple Blogging Platform.
+
 
 ---
 
