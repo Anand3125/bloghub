@@ -5,7 +5,7 @@ const User = require("../models/User");
 // Register user
 const register = async (req, res) => {
   try {
-    const { username, email, password } = req.body;
+    const { name, email, password } = req.body;
 
     // Check if user already exists
     const userExists = await User.findOne({ email });
@@ -13,21 +13,17 @@ const register = async (req, res) => {
       return res.status(400).json({ message: "User already exists" });
     }
 
-    // Hash password
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(password, salt);
-
-    // Create user
+    // Create user (password will be hashed by the pre-save hook)
     const user = await User.create({
-      username,
+      name,
       email,
-      password: hashedPassword,
+      password,
     });
 
     if (user) {
       res.status(201).json({
         _id: user._id,
-        username: user.username,
+        name: user.name,
         email: user.email,
         token: generateToken(user._id),
       });
@@ -59,7 +55,7 @@ const login = async (req, res) => {
 
     res.json({
       _id: user._id,
-      username: user.username,
+      name: user.name,
       email: user.email,
       token: generateToken(user._id),
     });

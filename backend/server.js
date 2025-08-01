@@ -5,6 +5,7 @@ const cors = require("cors"); // 🌍 Cross-Origin Resource Sharing
 const connectDB = require("./config/db"); // 🛢️ MongoDB connection
 const authRoutes = require("./routes/authRoutes"); // 🔑 Auth routes
 const blogRoutes = require("./routes/blogRoutes"); // ✍️ Blog routes
+const userRoutes = require("./routes/userRoutes"); // 👤 User routes
 
 dotenv.config(); // 🧪 Load env variables
 connectDB(); // 🔌 Connect to DB
@@ -16,6 +17,7 @@ app.use(express.json()); // 📨 Parse JSON
 // 🛣️ Routes
 app.use("/api/auth", authRoutes); // 🔑 Auth route handler
 app.use("/api/blogs", blogRoutes); // 📚 Blog route handler
+app.use("/api/users", userRoutes); // 👤 User route handler
 
 // 🏠 Root route
 app.get("/", (req, res) => {
