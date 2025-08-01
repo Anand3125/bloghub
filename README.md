@@ -1,6 +1,3 @@
-# 👋 Hi, I'm Anand Kumar
-
-🎓 Full-Stack Developer | MERN  | AI Enthusiast  
 # BlogHub - A Simple Blogging Platform
 
 A full-stack MERN (MongoDB, Express.js, React.js, Node.js) blogging application that allows users to register, login, create blog posts, view blogs, and manage their own posts.
@@ -97,6 +94,7 @@ A full-stack MERN (MongoDB, Express.js, React.js, Node.js) blogging application 
 3. **Create environment variables**
    Create a `.env` file in the backend directory:
    ```env
+
    PORT=5000
    MONGODB_URI=mongodb://localhost:27017/bloghub
    JWT_SECRET=your_jwt_secret_key_here_make_it_long_and_secure
@@ -221,7 +219,7 @@ ASSIGNMENT/
 
 ## 📄 License
 
-This project is open source and available under the specific licnese.
+This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 ## 📌 Other Projects
@@ -256,9 +254,12 @@ Hi, I'm **Anand Kumar**, a full-stack developer passionate about modern web and 
 ---
 
 
-## 👨‍💻 Author
+
+
+
 
 Created as a MERN Stack Developer assignment for BlogHub - A Simple Blogging Platform.
+
 
 ---
 
