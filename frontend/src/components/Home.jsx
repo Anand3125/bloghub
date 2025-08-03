@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
+import { blogsAPI } from '../utils/api.js';
+import EnvironmentInfo from './EnvironmentInfo.jsx';
+import ConnectionTest from './ConnectionTest.jsx';
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
@@ -11,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('/blogs');
+        const response = await blogsAPI.getAll();
         setBlogs(response.data.slice(0, 3)); // Show only 3 latest blogs
       } catch (error) {
         console.error('Error fetching blogs:', error);
@@ -25,6 +27,12 @@ const Home = () => {
 
   return (
     <div className="home">
+      {/* Environment Info - Only show in development */}
+      {process.env.NODE_ENV === 'development' && <EnvironmentInfo />}
+      
+      {/* Connection Test - Only show in development */}
+      {process.env.NODE_ENV === 'development' && <ConnectionTest />}
+      
       <div className="hero">
         <h1>Welcome to BlogHub</h1>
         <p>Share your thoughts, ideas, and stories with the world</p>

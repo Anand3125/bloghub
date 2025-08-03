@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import axios from 'axios';
 import './App.css';
 
 // Components
@@ -17,10 +16,32 @@ import Profile from './components/Profile';
 // Context
 import { AuthProvider } from './context/AuthContext';
 
-// Configure axios base URL
-axios.defaults.baseURL = 'http://localhost:5000/api';
+// Utils
+import { config } from './utils/config.js';
+import api from './utils/api.js';
 
 function App() {
+  // Log environment info on app start
+  useEffect(() => {
+    console.log('🚀 App Environment:', {
+      frontendUrl: config.FRONTEND_URL,
+      backendUrl: config.BACKEND_URL,
+      apiBaseUrl: config.API_BASE_URL,
+      environment: config.IS_DEVELOPMENT ? 'Development' : 'Production',
+      appName: config.APP_NAME,
+      version: config.APP_VERSION
+    });
+    
+    // Health check on app start
+    api.get('/')
+      .then(response => {
+        console.log('✅ Backend API is running:', response.data);
+      })
+      .catch(error => {
+        console.error('❌ Backend API connection failed:', error.message);
+      });
+  }, []);
+
   return (
     <AuthProvider>
       <Router>
